@@ -8,7 +8,7 @@ import com.mongodb.client.MongoDatabase;
 
 
 public class Connection {
-  static ConnectionString connectionString = new ConnectionString("mongodb+srv://iesp_db:<password>@cluster0.yvnkv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
+  static ConnectionString connectionString = new ConnectionString("mongodb+srv://iesp_db:senha123@cluster0.yvnkv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority");
   static MongoClientSettings settings = MongoClientSettings.builder()
             .applyConnectionString(connectionString)
             .build();
