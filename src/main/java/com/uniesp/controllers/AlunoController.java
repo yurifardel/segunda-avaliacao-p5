@@ -13,12 +13,12 @@ import org.bson.types.ObjectId;
 public class AlunoController extends Alunos{
   public void insert(String name, String email){
     Document doc = new Document("name", name).append("email", email);
-    collection.insertOne(doc);
+    AlunosCollection.insertOne(doc);
   }
   
   public void delete(String id){
     Bson query = eq("_id", new ObjectId(id));
-    collection.deleteOne(query);
+    AlunosCollection.deleteOne(query);
   }
 
  public void update(String id, String name, String email){
@@ -32,7 +32,7 @@ public class AlunoController extends Alunos{
 
   UpdateOptions options = new UpdateOptions().upsert(true);
 
-  collection.updateOne(query, updates, options);
+  AlunosCollection.updateOne(query, updates, options);
  }
 
 }

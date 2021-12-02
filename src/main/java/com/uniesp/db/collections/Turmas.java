@@ -5,7 +5,7 @@ import com.uniesp.db.Connection;
 
 import org.bson.Document;
 
-public class Alunos extends Connection {
-  protected static MongoCollection<Document> AlunosCollection = db.getCollection("alunos");
-
+public class Turmas extends Connection {
+  protected static MongoCollection<Document> TurmasCollection = db.getCollection("turmas");
+  
 }
